@@ -1,0 +1,103 @@
+/* !The designs were created to the following widths:
+               Font size (quote): 28px  
+               Mobile: 375px 
+               Desktop: 1440px */
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --p-Light-Cyan: hsl(193, 38%, 86%);
+  --p-Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+/* main styling ------------------------------------------------------------------- */
+
+.body-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Dark-Blue);
+}
+
+.advice-box {
+  width: 50rem;
+  height: 32rem;
+  background-color: var(--Dark-Grayish-Blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.advice-number {
+  margin: 4rem 0 2rem 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--p-Neon-Green);
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+}
+
+.advice-text {
+  color: var(--p-Light-Cyan);
+  margin: 0;
+  font-size: 2.7rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.line {
+  content: "";
+  width: 80%;
+  height: 3px;
+  background-color: var(--p-Neon-Green);
+  margin: 3rem 0 6rem 0;
+}
+
+.dice-btn {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 5rem;
+  background-color: var(--p-Neon-Green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  cursor: pointer;
+  transition: 250ms all;
+  position: absolute;
+  bottom: -2.5rem;
+}
+
+.dice-btn:hover {
+  box-shadow: var(--p-Neon-Green) 0px 0px 20px;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .advice-box {
+    width: 90%;
+    height: fit-content;
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
